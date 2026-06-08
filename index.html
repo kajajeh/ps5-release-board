@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PS5 Release Board · Rest of 2026 → 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Spline+Sans:wght@400;500;600;700&family=Spline+Sans+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#070810; --bg2:#0c0e1a; --panel:rgba(20,23,38,0.62); --panel-solid:#141726;
+  --line:rgba(120,140,200,0.16); --line-bright:rgba(120,150,255,0.4);
+  --ink:#eef1fb; --ink-dim:#9aa3c4; --ink-faint:#666e92;
+  --cyan:#34e7d8; --cyan-deep:#13b6ab; --blue:#5b8dff; --coral:#ff6b5e; --gold:#ffc14d;
+  --accent:var(--cyan);
+  --sans:"Spline Sans",system-ui,sans-serif;
+  --disp:"Bricolage Grotesque",var(--sans);
+  --mono:"Spline Sans Mono",ui-monospace,monospace;
+  --r:16px; --maxw:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans); background:var(--bg); color:var(--ink);
+  -webkit-font-smoothing:antialiased; line-height:1.5; overflow-x:hidden;
+  background-image:
+    radial-gradient(900px 600px at 12% -8%, rgba(52,231,216,0.10), transparent 60%),
+    radial-gradient(800px 700px at 92% 4%, rgba(91,141,255,0.14), transparent 60%),
+    radial-gradient(700px 600px at 50% 120%, rgba(255,107,94,0.07), transparent 55%);
+  background-attachment:fixed;
+}
+body::before{ /* grain */
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:9999; opacity:.04; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit}
+::selection{background:var(--cyan);color:#04201d}
+
+/* ---------- layout ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+header.hero{padding:54px 0 26px;position:relative}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:34px;height:1px;background:linear-gradient(90deg,var(--cyan),transparent)}
+h1.title{font-family:var(--disp);font-weight:800;line-height:.98;letter-spacing:-.02em;margin:14px 0 0;
+  font-size:clamp(38px,7vw,80px);}
+h1.title .lo{color:var(--ink-dim);font-weight:700}
+.title .grad{background:linear-gradient(105deg,var(--cyan),var(--blue) 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:680px;color:var(--ink-dim);font-size:16px;margin-top:16px}
+.lede b{color:var(--ink);font-weight:600}
+
+/* identity row */
+.idrow{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:24px}
+.namebox{display:flex;align-items:center;gap:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;backdrop-filter:blur(8px)}
+.namebox label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);padding:0 14px}
+.namebox input{background:transparent;border:0;color:var(--ink);font-family:var(--sans);font-weight:600;font-size:15px;padding:12px 16px 12px 0;width:190px;outline:none}
+.namebox input::placeholder{color:var(--ink-faint)}
+.stat-pills{display:flex;gap:10px;flex-wrap:wrap}
+.spill{font-family:var(--mono);font-size:12.5px;font-weight:600;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:9px 15px;display:flex;gap:8px;align-items:center;backdrop-filter:blur(8px)}
+.spill b{color:var(--cyan);font-size:14px}
+.spill.on b{color:var(--coral)}
+.spill.freshness{color:var(--ink-dim);font-weight:500}
+.spill.freshness b{color:var(--cyan);font-weight:700}
+
+/* ---------- view tabs ---------- */
+.viewtabs{display:flex;gap:6px;margin:30px 0 18px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40;
+  background:linear-gradient(var(--bg),rgba(7,8,16,.86));backdrop-filter:blur(10px);padding-top:8px}
+.vtab{font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--ink-faint);background:none;border:0;padding:12px 16px 16px;cursor:pointer;position:relative;transition:color .2s}
+.vtab .cnt{font-family:var(--mono);font-size:12px;color:var(--ink-faint);margin-left:7px}
+.vtab[data-active="true"]{color:var(--ink)}
+.vtab[data-active="true"] .cnt{color:var(--coral)}
+.vtab[data-active="true"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2.5px;border-radius:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+
+/* ---------- toolbar ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;margin-bottom:8px}
+.search{flex:1;min-width:230px;position:relative}
+.search input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 16px 13px 42px;color:var(--ink);font-family:var(--sans);font-size:15px;outline:none;backdrop-filter:blur(8px);transition:border-color .2s}
+.search input:focus{border-color:var(--line-bright)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--ink-faint)}
+.sortsel{background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--ink);font-family:var(--mono);font-size:13px;padding:13px 14px;outline:none;cursor:pointer;backdrop-filter:blur(8px)}
+.sortsel option{background:var(--panel-solid)}
+
+.facets{display:flex;flex-direction:column;gap:12px;margin:16px 0 26px}
+.facetrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.facetrow .flabel{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);min-width:74px}
+.chip{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--ink-dim);background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:999px;padding:7px 13px;cursor:pointer;transition:.16s;user-select:none;white-space:nowrap}
+.chip:hover{border-color:var(--line-bright);color:var(--ink)}
+.chip[data-on="true"]{background:linear-gradient(180deg,rgba(52,231,216,.18),rgba(52,231,216,.07));border-color:var(--cyan);color:#bff8f1}
+.chip.coral[data-on="true"]{background:linear-gradient(180deg,rgba(255,107,94,.2),rgba(255,107,94,.08));border-color:var(--coral);color:#ffd2cc}
+.toolspacer{flex:1}
+.linkbtn{font-family:var(--mono);font-size:12px;color:var(--ink-faint);background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.linkbtn:hover{color:var(--cyan)}
+
+/* ---------- grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;padding-bottom:50px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;
+  backdrop-filter:blur(10px);transition:transform .22s cubic-bezier(.2,.8,.2,1),border-color .22s,box-shadow .22s;
+  animation:rise .5s both;position:relative}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.card:hover{transform:translateY(-5px);border-color:var(--line-bright);box-shadow:0 24px 50px -28px rgba(0,0,0,.9)}
+.card[data-picked="true"]{border-color:rgba(255,107,94,.55);box-shadow:0 0 0 1px rgba(255,107,94,.35),0 20px 44px -30px rgba(255,107,94,.5)}
+
+.art{position:relative;aspect-ratio:16/9;overflow:hidden;display:flex;align-items:flex-end;padding:14px;isolation:isolate}
+.art .motif{position:absolute;right:-6px;top:-22px;font-size:120px;line-height:1;opacity:.16;transform:rotate(-8deg);filter:saturate(0)}
+.art .arttitle{font-family:var(--disp);font-weight:800;font-size:clamp(20px,3.4vw,30px);line-height:.95;letter-spacing:-.02em;color:#fff;
+  text-shadow:0 2px 24px rgba(0,0,0,.55);max-width:88%;z-index:2;text-wrap:balance}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 30%,rgba(0,0,0,.55));z-index:1}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+
+.datepill{position:absolute;top:12px;left:12px;z-index:3;font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.03em;
+  background:rgba(6,8,16,.7);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:8px;padding:6px 10px;backdrop-filter:blur(6px)}
+.datepill.tbd{color:var(--gold);border-color:rgba(255,193,77,.4)}
+.datepill.out{color:#7ee06a;border-color:rgba(126,224,106,.5)}
+.platbadge{position:absolute;top:12px;right:12px;z-index:3;font-family:var(--mono);font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:7px;padding:5px 9px;backdrop-filter:blur(6px)}
+.platbadge.excl{background:rgba(52,231,216,.18);border:1px solid var(--cyan);color:#bff8f1}
+.platbadge.cons{background:rgba(91,141,255,.18);border:1px solid var(--blue);color:#cdd9ff}
+.platbadge.multi{background:rgba(6,8,16,.6);border:1px solid rgba(255,255,255,.18);color:#cfd6f0}
+
+.body{padding:16px 17px 6px;display:flex;flex-direction:column;gap:9px;flex:1}
+.gtitle{font-family:var(--disp);font-weight:700;font-size:19px;line-height:1.08;letter-spacing:-.01em}
+.dev{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);letter-spacing:.02em;margin-top:-3px}
+.genres{display:flex;gap:6px;flex-wrap:wrap}
+.gtag{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim);border:1px solid var(--line);border-radius:6px;padding:3px 7px}
+.bio{font-size:13.6px;color:var(--ink-dim);line-height:1.52}
+.hype{display:flex;gap:3px;align-items:center;font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.hype .dot{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.hype .dot.on{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+
+.foot{display:flex;flex-direction:column;gap:9px;padding:12px 17px 17px;margin-top:auto}
+.foot .links{display:flex;gap:9px}
+.foot .links .btn{flex:1}
+.btn.metacritic{gap:7px}
+.btn.metacritic:hover{border-color:var(--blue);color:var(--blue)}
+.mcbox{font-family:var(--mono);font-weight:800;font-size:11px;border-radius:4px;padding:2px 6px;line-height:1.1;color:#04140a}
+.mc-hi .mcbox{background:#7ee06a}
+.mc-mid .mcbox{background:var(--gold)}
+.mc-lo .mcbox{background:var(--coral);color:#1a0603}
+.mc-pending{color:var(--ink-dim)}
+.mc-pending .mcbox{background:rgba(255,255,255,.08);color:var(--ink-faint)}
+.btn{flex:1;font-family:var(--mono);font-weight:600;font-size:12.5px;letter-spacing:.03em;border-radius:10px;padding:11px 12px;cursor:pointer;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;gap:7px;transition:.16s;background:rgba(255,255,255,.03);color:var(--ink)}
+.btn.trailer:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn.pick{background:rgba(255,255,255,.03)}
+.btn.pick:hover{border-color:var(--coral);color:var(--coral)}
+.card[data-picked="true"] .btn.pick{background:linear-gradient(180deg,rgba(255,107,94,.9),rgba(255,107,94,.7));border-color:transparent;color:#1a0603;font-weight:700}
+.btn svg{width:14px;height:14px}
+
+.empty{grid-column:1/-1;text-align:center;padding:70px 20px;color:var(--ink-faint)}
+.empty .big{font-family:var(--disp);font-weight:700;font-size:24px;color:var(--ink-dim);margin-bottom:8px}
+
+/* month group headers (calendar view) */
+.monthhead{grid-column:1/-1;display:flex;align-items:baseline;gap:14px;margin:18px 0 2px;padding-top:8px}
+.monthhead h3{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.01em}
+.monthhead .ln{flex:1;height:1px;background:var(--line)}
+.monthhead .ct{font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+
+/* calendar action bar */
+.calbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:22px;backdrop-filter:blur(10px)}
+.calbar .ct{font-family:var(--mono);font-size:13px;color:var(--ink-dim);flex:1;min-width:200px}
+.calbar .ct b{color:var(--ink)}
+.action{font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.02em;border-radius:10px;padding:11px 16px;cursor:pointer;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink);display:flex;align-items:center;gap:8px;transition:.16s}
+.action svg{width:15px;height:15px}
+.action.primary{background:linear-gradient(180deg,var(--cyan),var(--cyan-deep));border-color:transparent;color:#04201d;font-weight:700}
+.action:hover{border-color:var(--line-bright)}
+.action.primary:hover{filter:brightness(1.08)}
+
+/* toast */
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(140%);z-index:9000;
+  background:var(--panel-solid);border:1px solid var(--line-bright);border-radius:12px;padding:13px 20px;font-family:var(--mono);font-size:13px;color:var(--ink);
+  box-shadow:0 18px 40px -16px rgba(0,0,0,.8);transition:transform .35s cubic-bezier(.2,.9,.2,1);max-width:90vw}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast b{color:var(--cyan)}
+
+footer.foot-note{border-top:1px solid var(--line);padding:26px 0 60px;color:var(--ink-faint);font-size:12.5px;font-family:var(--mono);line-height:1.7}
+footer.foot-note a{color:var(--ink-dim);text-decoration:underline;text-underline-offset:2px}
+
+@media(max-width:640px){
+  header.hero{padding:36px 0 18px}
+  .grid{grid-template-columns:1fr;gap:16px}
+  .namebox input{width:140px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">PlayStation 5 · Canada · live as of June 7 2026</div>
+    <h1 class="title"><span class="lo">The</span> <span class="grad">PS5 Release Board</span><br>Rest of 2026 → 2027</h1>
+    <p class="lede">Every confirmed PS5 game coming to <b>Canada</b> through the end of 2027 — pulled from the June 3 State of Play, Summer Game Fest, and today's Xbox Games Showcase. Tap <b>＋ My Calendar</b> on anything you care about, then export a real calendar file or share your shortlist. Your picks save automatically in this browser, so each friend keeps their own board.</p>
+    <div class="idrow">
+      <div class="namebox">
+        <label for="nameInput">Board owner</label>
+        <input id="nameInput" type="text" placeholder="Your name" autocomplete="off" maxlength="28" />
+      </div>
+      <div class="stat-pills">
+        <span class="spill">Showing <b id="statShown">0</b></span>
+        <span class="spill on">On calendar <b id="statPicked">0</b></span>
+        <span class="spill freshness" id="freshness">Loading…</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="viewtabs">
+    <button class="vtab" data-view="all" data-active="true">Browse all <span class="cnt" id="cntAll"></span></button>
+    <button class="vtab" data-view="cal" data-active="false">★ My Calendar <span class="cnt" id="cntCal"></span></button>
+  </nav>
+
+  <!-- ALL VIEW -->
+  <section id="allView">
+    <div class="toolbar">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" type="text" placeholder="Search games, studios, genres…" autocomplete="off" />
+      </div>
+      <select class="sortsel" id="sortSel">
+        <option value="date">Sort · Soonest first</option>
+        <option value="date-desc">Sort · Latest first</option>
+        <option value="title">Sort · A → Z</option>
+        <option value="hype">Sort · Most hyped</option>
+      </select>
+    </div>
+    <div class="facets" id="facets"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- CALENDAR VIEW -->
+  <section id="calView" style="display:none">
+    <div class="calbar">
+      <div class="ct" id="calSummary">No games on your calendar yet.</div>
+      <button class="action primary" id="icsBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Add to calendar (.ics)
+      </button>
+      <button class="action" id="shareBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+        Copy share link
+      </button>
+      <button class="action" id="clearBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+        Clear
+      </button>
+    </div>
+    <div class="grid" id="calGrid"></div>
+  </section>
+
+  <footer class="foot-note">
+    Dates reflect Canadian / North American availability and were accurate at build time (June 7, 2026) — game dates shift, so confirm near launch. "Trailer" buttons open a search for each game's official trailer. Picks are stored only in your own browser (localStorage); the share link encodes your shortlist in the URL so nothing is sent to a server.<br>
+    Built for hosting on Netlify · single-file, no backend required.
+  </footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   DATA — confirmed PS5 titles, rest of 2026 → 2027 (CA/NA)
+   date: full YYYY-MM-DD  | win:{y,m}  month known | win:{y,s} season | win:{y} year only | tbd:true
+   plat: 'excl'=PS5 exclusive · 'cons'=console exclusive (+PC) · 'multi'=multiplatform
+   ============================================================ */
+let GAMES = [];
+let META = null;
+
+/* genre visual system */
+const GENRE = {
+  Action:{c1:"#ff5e57",c2:"#7a1f25",m:"\u2694"},
+  Adventure:{c1:"#3aa6ff",c2:"#173a63",m:"\u25C8"},
+  RPG:{c1:"#9a7bff",c2:"#2e1f63",m:"\u2726"},
+  Shooter:{c1:"#43c6e8",c2:"#16414f",m:"\u25CE"},
+  Horror:{c1:"#46d07f",c2:"#0c2b1c",m:"\u2620"},
+  Fighting:{c1:"#ff5fa2",c2:"#5c123c",m:"\u270A"},
+  Racing:{c1:"#ffc14d",c2:"#5e3d0e",m:"\u2691"},
+  Strategy:{c1:"#33e0c2",c2:"#0e413a",m:"\u265F"},
+  Sports:{c1:"#7ee06a",c2:"#1f461a",m:"\u26BD"},
+  MMO:{c1:"#e8b15f",c2:"#4d3413",m:"\u2742"},
+  Survival:{c1:"#c0a35a",c2:"#3a3014",m:"\u26CF"},
+  Stealth:{c1:"#8fa3c8",c2:"#222b40",m:"\u25C6"},
+  Platformer:{c1:"#ff86c8",c2:"#54214a",m:"\u25C6"}
+};
+const PLAT_LABEL = {excl:"PS5 Exclusive",cons:"Console Excl.",multi:"Multiplatform"};
+const MONTHS = ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const MONTHS_FULL = ["","January","February","March","April","May","June","July","August","September","October","November","December"];
+
+/* ---------- state ---------- */
+let picks = new Set();
+let view = "all";
+const F = {q:"", year:new Set(), month:new Set(), genre:new Set(), plat:new Set(), status:new Set(), mineOnly:false};
+let sort = "date";
+
+/* ---------- persistence ---------- */
+const LS_PICKS="ps5board_picks_v1", LS_NAME="ps5board_name_v1";
+function save(){ try{ localStorage.setItem(LS_PICKS, JSON.stringify([...picks])); }catch(e){} }
+function load(){
+  try{
+    const p=localStorage.getItem(LS_PICKS); if(p) picks=new Set(JSON.parse(p));
+    const n=localStorage.getItem(LS_NAME); if(n) document.getElementById("nameInput").value=n;
+  }catch(e){}
+}
+/* shared view via URL hash */
+function readHashView(){
+  const h=location.hash;
+  if(h.startsWith("#v=")){
+    try{
+      const json=decodeURIComponent(escape(atob(h.slice(3))));
+      const arr=JSON.parse(json);
+      if(Array.isArray(arr)){
+        picks=new Set(arr.filter(id=>GAMES.some(g=>g.id===id)));
+        save();
+        history.replaceState(null,"",location.pathname+location.search);
+        return true;
+      }
+    }catch(e){}
+  }
+  return false;
+}
+function buildShareLink(){
+  const json=JSON.stringify([...picks]);
+  const enc=btoa(unescape(encodeURIComponent(json)));
+  return location.origin+location.pathname+"#v="+enc;
+}
+
+/* ---------- helpers ---------- */
+function statusOf(g){
+  if(g.date) return "dated";
+  if(g.win && g.win.m) return "window";
+  return "tbd"; // season-only or year-only or fully tbd -> treated as soft
+}
+function sortDate(g){
+  if(g.date) return g.date;
+  if(g.win){
+    if(g.win.m) return g.win.y+"-"+String(g.win.m).padStart(2,"0")+"-15";
+    if(g.win.s){ const s={Early:"02",Spring:"04",Summer:"07",Fall:"10",Holiday:"12"}[g.win.s]||"06"; return g.win.y+"-"+s+"-15"; }
+    return g.win.y+"-12-31";
+  }
+  return "9999-12-31"; // tbd last
+}
+function yearOf(g){ if(g.date) return +g.date.slice(0,4); if(g.win) return g.win.y; return null; }
+function monthOf(g){ if(g.date) return +g.date.slice(5,7); if(g.win&&g.win.m) return g.win.m; return null; }
+function dispDate(g){
+  if(g.date){ const [y,m,d]=g.date.split("-"); return MONTHS[+m]+" "+(+d)+", "+y; }
+  if(g.win){
+    if(g.win.m) return MONTHS[g.win.m]+" "+g.win.y;
+    if(g.win.s) return g.win.s+" "+g.win.y;
+    return ""+g.win.y;
+  }
+  return "TBD";
+}
+function dispDateShort(g){
+  if(g.date){ const [y,m,d]=g.date.split("-"); return MONTHS[+m].toUpperCase()+" "+(+d); }
+  if(g.win){ if(g.win.m) return MONTHS[g.win.m].toUpperCase()+" \u2022 "+g.win.y; if(g.win.s) return g.win.s.toUpperCase()+" "+g.win.y; return ""+g.win.y; }
+  return "TBD";
+}
+
+/* ---------- filtering ---------- */
+function passes(g){
+  if(F.mineOnly && !picks.has(g.id)) return false;
+  if(F.year.size){ const y=yearOf(g); const key = g.tbd?"tbd":(y? (y===2026?"2026":(y===2027?"2027":"other")) :"tbd"); if(!F.year.has(key)) return false; }
+  if(F.month.size){ const m=monthOf(g); if(!m||!F.month.has(String(m))) return false; }
+  if(F.genre.size){ if(!g.g.some(x=>F.genre.has(x))) return false; }
+  if(F.plat.size){ if(!F.plat.has(g.plat)) return false; }
+  if(F.status.size){ if(!F.status.has(statusOf(g)==="dated"?"dated":(statusOf(g)==="window"?"window":"tbd"))) return false; }
+  if(F.q){
+    const hay=(g.t+" "+g.dev+" "+g.g.join(" ")+" "+g.bio).toLowerCase();
+    if(!F.q.split(/\s+/).every(tok=>hay.includes(tok))) return false;
+  }
+  return true;
+}
+function sorted(list){
+  const a=[...list];
+  if(sort==="title") a.sort((x,y)=>x.t.localeCompare(y.t));
+  else if(sort==="hype") a.sort((x,y)=>y.hype-x.hype || sortDate(x).localeCompare(sortDate(y)));
+  else if(sort==="date-desc") a.sort((x,y)=>sortDate(y).localeCompare(sortDate(x)));
+  else a.sort((x,y)=>sortDate(x).localeCompare(sortDate(y)));
+  return a;
+}
+
+function todayISO(){const d=new Date();return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());}
+function isReleased(g){return !!(g.date && g.date < todayISO());}
+function mcChip(g){
+  const has = typeof g.mc==="number" && g.mc>=0 && g.mc<=100;
+  const url = g.mcUrl || ("https://duckduckgo.com/?q="+encodeURIComponent("!ducky metacritic "+g.t+" ps5"));
+  const cls = has ? (g.mc>=75?"mc-hi":(g.mc>=50?"mc-mid":"mc-lo")) : "mc-pending";
+  const box = has ? g.mc : "\u2013";
+  const tip = has ? "Metacritic critic score" : "Score pending \u2014 opens Metacritic";
+  return `<a class="btn metacritic ${cls}" href="${url}" target="_blank" rel="noopener" title="${tip}"><span class="mcbox">${box}</span>${has?"Metascore":"Metacritic"}</a>`;
+}
+
+/* ---------- card render ---------- */
+function cardHTML(g){
+  const gen=GENRE[g.g[0]]||GENRE.Action;
+  const picked=picks.has(g.id);
+  const st=statusOf(g);
+  const pill = g.tbd ? `<div class="datepill tbd">TBD</div>` : isReleased(g) ? `<div class="datepill out">OUT NOW</div>` : `<div class="datepill${st==='tbd'?' tbd':''}">${dispDateShort(g)}</div>`;
+  const art = g.img
+    ? `<img src="${g.img}" alt="" loading="lazy"/>`
+    : `<span class="motif">${gen.m}</span>`;
+  const bg = g.img ? "" : `background:radial-gradient(120% 120% at 75% 0%, ${gen.c1}55, ${gen.c2} 70%), linear-gradient(160deg, ${gen.c2}, #0a0c16);`;
+  const trailerQ = encodeURIComponent(g.t+" PS5 official trailer");
+  const hypeDots = [1,2,3].map(n=>`<span class="dot${n<=g.hype?' on':''}"></span>`).join("");
+  return `<article class="card" data-picked="${picked}" data-id="${g.id}" style="animation-delay:${Math.random()*0.18}s">
+    <div class="art" style="${bg}">
+      ${art}${pill}
+      <div class="platbadge ${g.plat}">${PLAT_LABEL[g.plat]}</div>
+      <div class="arttitle">${g.t}</div>
+    </div>
+    <div class="body">
+      <div>
+        <div class="gtitle">${g.t}</div>
+        <div class="dev">${g.dev}</div>
+      </div>
+      <div class="genres">${g.g.map(x=>`<span class="gtag">${x}</span>`).join("")}</div>
+      <p class="bio">${g.bio}</p>
+      <div class="hype">Anticipation ${hypeDots}</div>
+    </div>
+    <div class="foot">
+      <div class="links">
+        <a class="btn trailer" href="https://www.youtube.com/results?search_query=${trailerQ}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 4 14 8-14 8V4z" fill="currentColor" stroke="none"/></svg> Trailer
+        </a>
+        ${mcChip(g)}
+      </div>
+      <button class="btn pick" data-pick="${g.id}">
+        ${picked
+          ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> On calendar'
+          : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg> My Calendar'}
+      </button>
+    </div>
+  </article>`;
+}
+
+/* ---------- facet chips ---------- */
+function buildFacets(){
+  const genres=[...new Set(GAMES.flatMap(g=>g.g))].sort();
+  const months=[...new Set(GAMES.map(monthOf).filter(Boolean))].sort((a,b)=>a-b);
+  const el=document.getElementById("facets");
+  function row(label, chips){ return `<div class="facetrow"><span class="flabel">${label}</span>${chips}</div>`; }
+  function chip(group,val,txt,coral){ return `<button class="chip${coral?' coral':''}" data-group="${group}" data-val="${val}">${txt}</button>`; }
+  el.innerHTML =
+    row("When", [chip("year","2026","Rest of 2026"),chip("year","2027","2027"),chip("year","tbd","On the horizon")].join("")) +
+    row("Month", months.map(m=>chip("month",String(m),MONTHS[m])).join("")) +
+    row("Genre", genres.map(g=>chip("genre",g,g)).join("")) +
+    row("Platform", [chip("plat","excl","PS5 Exclusive"),chip("plat","cons","Console Excl."),chip("plat","multi","Multiplatform")].join("")) +
+    row("Status", [chip("status","dated","Exact date"),chip("status","window","Month window"),chip("status","tbd","Year / TBD")].join("")) +
+    `<div class="facetrow"><span class="flabel"></span>
+       <button class="chip coral" id="mineChip" data-mine="1">\u2605 Only my picks</button>
+       <div class="toolspacer"></div>
+       <button class="linkbtn" id="resetFilters">reset filters</button>
+     </div>`;
+  el.querySelectorAll(".chip[data-group]").forEach(c=>{
+    c.addEventListener("click",()=>{
+      const grp=c.dataset.group, val=c.dataset.val, set=F[grp];
+      if(set.has(val)){set.delete(val);c.dataset.on="false";} else {set.add(val);c.dataset.on="true";}
+      render();
+    });
+  });
+  document.getElementById("mineChip").addEventListener("click",e=>{
+    F.mineOnly=!F.mineOnly; e.currentTarget.dataset.on=F.mineOnly?"true":"false"; render();
+  });
+  document.getElementById("resetFilters").addEventListener("click",()=>{
+    F.q="";F.year.clear();F.month.clear();F.genre.clear();F.plat.clear();F.status.clear();F.mineOnly=false;
+    document.getElementById("searchInput").value="";
+    el.querySelectorAll(".chip").forEach(c=>c.dataset.on="false");
+    render();
+  });
+}
+
+/* ---------- main render ---------- */
+function render(){
+  // stats
+  document.getElementById("cntAll").textContent="("+GAMES.length+")";
+  document.getElementById("cntCal").textContent="("+picks.size+")";
+  document.getElementById("statPicked").textContent=picks.size;
+
+  if(view==="all"){
+    document.getElementById("allView").style.display="";
+    document.getElementById("calView").style.display="none";
+    const list=sorted(GAMES.filter(passes));
+    document.getElementById("statShown").textContent=list.length;
+    const grid=document.getElementById("grid");
+    grid.innerHTML = list.length ? list.map(cardHTML).join("")
+      : `<div class="empty"><div class="big">No matches</div>Try clearing a filter or two.</div>`;
+    wirePicks(grid);
+  } else {
+    document.getElementById("allView").style.display="none";
+    document.getElementById("calView").style.display="";
+    renderCalendar();
+  }
+  // reflect any picked changes on visible cards
+}
+
+function renderCalendar(){
+  const mine=sorted(GAMES.filter(g=>picks.has(g.id)));
+  const grid=document.getElementById("calGrid");
+  const sum=document.getElementById("calSummary");
+  const datedCount=mine.filter(g=>g.date||(g.win&&g.win.m)).length;
+  const name=(document.getElementById("nameInput").value||"").trim();
+  document.getElementById("statShown").textContent=mine.length;
+  if(!mine.length){
+    sum.innerHTML="No games on your calendar yet \u2014 head to <b>Browse all</b> and tap <b>＋ My Calendar</b>.";
+    grid.innerHTML=`<div class="empty"><div class="big">Your board is empty</div>Pick a few games and they'll line up here by release date.</div>`;
+    return;
+  }
+  sum.innerHTML=`${name?`<b>${name}'s</b> board: `:""}<b>${mine.length}</b> game${mine.length>1?"s":""} tracked \u00b7 <b>${datedCount}</b> exportable to your calendar.`;
+  // group by year-month
+  let html="", lastKey="";
+  for(const g of mine){
+    const y=yearOf(g), m=monthOf(g);
+    const key = g.tbd ? "TBD" : (m? y+"-"+m : "Window "+y);
+    if(key!==lastKey){
+      const label = g.tbd ? "On the horizon \u00b7 date TBD"
+        : (m ? MONTHS_FULL[m]+" "+y : "Later in "+y);
+      html+=`<div class="monthhead"><h3>${label}</h3><div class="ln"></div></div>`;
+      lastKey=key;
+    }
+    html+=cardHTML(g);
+  }
+  grid.innerHTML=html;
+  wirePicks(grid);
+}
+
+function wirePicks(scope){
+  scope.querySelectorAll("[data-pick]").forEach(b=>{
+    b.addEventListener("click",()=>{
+      const id=b.dataset.pick;
+      if(picks.has(id)){picks.delete(id); toast("Removed from your calendar");}
+      else {picks.add(id); toast("Added \u2014 it's on your calendar \u2605");}
+      save(); render();
+    });
+  });
+}
+
+/* ---------- .ics export ---------- */
+function pad(n){return String(n).padStart(2,"0");}
+function icsEscape(s){return s.replace(/([,;\\])/g,"\\$1").replace(/\n/g,"\\n");}
+function buildICS(){
+  const name=(document.getElementById("nameInput").value||"").trim();
+  const mine=GAMES.filter(g=>picks.has(g.id));
+  const events=[];
+  let skipped=0;
+  const now=new Date();
+  const stamp=now.getUTCFullYear()+pad(now.getUTCMonth()+1)+pad(now.getUTCDate())+"T"+pad(now.getUTCHours())+pad(now.getUTCMinutes())+pad(now.getUTCSeconds())+"Z";
+  for(const g of mine){
+    let y,m,d,approx=false;
+    if(g.date){ if(g.date<todayISO()){skipped++;continue;} [y,m,d]=g.date.split("-").map(Number); }
+    else if(g.win&&g.win.m){ y=g.win.y; m=g.win.m; d=1; approx=true; }
+    else { skipped++; continue; }
+    const dt=`${y}${pad(m)}${pad(d)}`;
+    const next=new Date(Date.UTC(y,m-1,d+1));
+    const dtEnd=`${next.getUTCFullYear()}${pad(next.getUTCMonth()+1)}${pad(next.getUTCDate())}`;
+    const summary=icsEscape(`\u{1F3AE} ${g.t}${approx?" (window \u2014 confirm date)":""}`);
+    const desc=icsEscape(`${g.dev} \u00b7 ${PLAT_LABEL[g.plat]} \u00b7 ${g.g.join(", ")}\n${g.bio}\nTrailer: https://www.youtube.com/results?search_query=${encodeURIComponent(g.t+" PS5 official trailer")}`);
+    events.push(
+      "BEGIN:VEVENT",
+      "UID:"+g.id+"-ps5board@local",
+      "DTSTAMP:"+stamp,
+      "DTSTART;VALUE=DATE:"+dt,
+      "DTEND;VALUE=DATE:"+dtEnd,
+      "SUMMARY:"+summary,
+      "DESCRIPTION:"+desc,
+      "TRANSP:TRANSPARENT",
+      "END:VEVENT"
+    );
+  }
+  const cal=[
+    "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//PS5 Release Board//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+    "X-WR-CALNAME:"+icsEscape((name?name+"'s ":"")+"PS5 Release Board"),
+    ...events,"END:VCALENDAR"
+  ].join("\r\n");
+  return {cal,count:events.length,skipped};
+}
+function downloadICS(){
+  if(!picks.size){toast("Add a few games first");return;}
+  const {cal,count,skipped}=buildICS();
+  if(!count){toast("None of your picks have a fixed date yet");return;}
+  const blob=new Blob([cal],{type:"text/calendar;charset=utf-8"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="ps5-release-board.ics";
+  document.body.appendChild(a);a.click();a.remove();
+  toast(`Calendar ready \u2014 ${count} event${count>1?"s":""}${skipped?`, ${skipped} TBD skipped`:""}`);
+}
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg){
+  const t=document.getElementById("toast");
+  t.innerHTML=msg; t.classList.add("show");
+  clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove("show"),2400);
+}
+
+/* ---------- events ---------- */
+document.getElementById("searchInput").addEventListener("input",e=>{F.q=e.target.value.trim().toLowerCase();render();});
+document.getElementById("sortSel").addEventListener("change",e=>{sort=e.target.value;render();});
+document.getElementById("nameInput").addEventListener("input",e=>{
+  try{localStorage.setItem(LS_NAME,e.target.value);}catch(_){}
+  if(view==="cal") renderCalendar();
+});
+document.querySelectorAll(".vtab").forEach(t=>{
+  t.addEventListener("click",()=>{
+    view=t.dataset.view;
+    document.querySelectorAll(".vtab").forEach(x=>x.dataset.active=String(x===t));
+    render(); window.scrollTo({top:document.querySelector(".viewtabs").offsetTop-8,behavior:"smooth"});
+  });
+});
+document.getElementById("icsBtn").addEventListener("click",downloadICS);
+document.getElementById("clearBtn").addEventListener("click",()=>{
+  if(!picks.size){toast("Nothing to clear");return;}
+  picks.clear();save();render();toast("Calendar cleared");
+});
+document.getElementById("shareBtn").addEventListener("click",async()=>{
+  if(!picks.size){toast("Add some games to share a board");return;}
+  const link=buildShareLink();
+  try{ await navigator.clipboard.writeText(link); toast("Share link copied \u2014 paste it to a friend"); }
+  catch(e){ prompt("Copy your share link:",link); }
+});
+
+/* ---------- freshness ---------- */
+function fmtWhen(iso){ if(!iso) return null; const d=new Date(iso); if(isNaN(d)) return null; return d.toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"}); }
+function updateFreshness(){ const el=document.getElementById("freshness"); if(!el) return; const w=META&&fmtWhen(META.updated); el.innerHTML = w ? `Catalog refreshed <b>${w}</b>` : `Launch catalog \u00b7 auto-updates monthly`; }
+
+/* ---------- data loading ---------- */
+async function loadGames(){
+  const tryUrls=["/.netlify/functions/games","/games.json"];
+  for(const u of tryUrls){
+    try{
+      const r=await fetch(u,{cache:"no-store"});
+      if(!r.ok) continue;
+      const j=await r.json();
+      const arr=Array.isArray(j)?j:(j&&Array.isArray(j.games)?j.games:null);
+      if(arr&&arr.length){ GAMES=arr; if(!Array.isArray(j)) META=j; return true; }
+    }catch(e){}
+  }
+  return false;
+}
+/* ---------- boot ---------- */
+(async function init(){
+  load();
+  await loadGames();
+  const imported=readHashView();
+  buildFacets();
+  render();
+  updateFreshness();
+  if(imported){ view="cal"; document.querySelectorAll(".vtab").forEach(x=>x.dataset.active=String(x.dataset.view==="cal")); render(); toast("Loaded a shared board \u2014 tweak it and it becomes yours"); }
+})();
+</script>
+</body>
+</html>
