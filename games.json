@@ -1,629 +1,759 @@
 [
- {
-  "id": "ufc6",
-  "t": "EA Sports UFC 6",
-  "dev": "EA Vancouver",
-  "date": "2026-06-19",
-  "plat": "multi",
-  "g": [
-   "Sports",
-   "Fighting"
-  ],
-  "hype": 1,
-  "bio": "The MMA franchise returns with overhauled clinch and ground striking, a deeper career mode, and a roster spanning the modern UFC. Aimed squarely at fans who want the most authentic octagon sim on console."
- },
- {
-  "id": "acbf",
-  "t": "Assassin's Creed Black Flag Resynced",
-  "dev": "Ubisoft",
-  "date": "2026-07-09",
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "A ground-up remake of the beloved pirate chapter. Sail the Caribbean as Edward Kenway with rebuilt naval combat, modernised stealth, and a fully remastered open world of islands, forts and ghostly shipwrecks."
- },
- {
-  "id": "halo",
-  "t": "Halo: Campaign Evolved",
-  "dev": "Halo Studios",
-  "date": "2026-07-28",
-  "plat": "multi",
-  "g": [
-   "Shooter"
-  ],
-  "hype": 2,
-  "bio": "The first mainline Halo ever to land on PlayStation — an Unreal Engine 5 remake of Combat Evolved's campaign with 4K visuals, nine extra weapons, and a brand-new three-mission prologue, Operation: METEORITE."
- },
- {
-  "id": "tokon",
-  "t": "Marvel Tokon: Fighting Souls",
-  "dev": "Arc System Works / PlayStation",
-  "date": "2026-08-06",
-  "plat": "cons",
-  "g": [
-   "Fighting"
-  ],
-  "hype": 2,
-  "bio": "A gorgeous 4-vs-4 tag-team Marvel brawler from the Guilty Gear studio. Build a squad from 20 launch heroes and villains, chain tag combos, and switch fighters mid-fight in flashy, combo-heavy bouts."
- },
- {
-  "id": "zerocompany",
-  "t": "Star Wars: Zero Company",
-  "dev": "Bit Reactor / Respawn",
-  "date": "2026-08-15",
-  "win": {
-   "y": 2026,
-   "m": 8
+  {
+    "id": "ufc6",
+    "t": "EA Sports UFC 6",
+    "dev": "EA Vancouver",
+    "date": "2026-06-19",
+    "plat": "multi",
+    "g": [
+      "Sports",
+      "Fighting"
+    ],
+    "hype": 1,
+    "bio": "The MMA franchise returns with overhauled clinch and ground striking, a deeper career mode, and a roster spanning the modern UFC. Aimed squarely at fans who want the most authentic octagon sim on console.",
+    "mc": 84,
+    "mcUrl": "https://www.metacritic.com/game/ea-sports-ufc-6/",
+    "img": "https://img.youtube.com/vi/T2MP_T2e-aU/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Strategy"
-  ],
-  "hype": 2,
-  "bio": "A turn-based tactics game in the XCOM mould set in the Clone Wars era. Lead a customisable squad of misfits, manage cover and abilities, and build bonds between your soldiers across a galaxy at war."
- },
- {
-  "id": "mgs2",
-  "t": "Metal Gear Solid: Master Collection Vol. 2",
-  "dev": "Konami",
-  "date": "2026-08-27",
-  "plat": "multi",
-  "g": [
-   "Stealth",
-   "Action"
-  ],
-  "hype": 1,
-  "bio": "The second wave of classic Metal Gear remasters, bundling later entries in the saga with extras and quality-of-life touches — essential preservation for stealth-action fans catching up on Kojima's run."
- },
- {
-  "id": "plague",
-  "t": "Resonance: A Plague Tale Legacy",
-  "dev": "Asobo Studio",
-  "date": "2026-08-27",
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "A new chapter in the acclaimed plague-ravaged saga of Amicia and Hugo. Expect the series' signature mix of stealth, light-and-rats puzzling, and gut-punch storytelling against a beautiful, brutal medieval France."
- },
- {
-  "id": "dawnwalker",
-  "t": "The Blood of Dawnwalker",
-  "dev": "Rebel Wolves",
-  "date": "2026-09-03",
-  "plat": "multi",
-  "g": [
-   "RPG"
-  ],
-  "hype": 3,
-  "bio": "A dark-fantasy vampire RPG from ex-Witcher 3 leads. Play a man caught between human and vampire as a literal day/night clock shapes a non-linear story — your hours are limited, and every choice spends them."
- },
- {
-  "id": "phantomblade",
-  "t": "Phantom Blade Zero",
-  "dev": "S-Game",
-  "date": "2026-09-09",
-  "plat": "cons",
-  "g": [
-   "Action",
-   "RPG"
-  ],
-  "hype": 3,
-  "bio": "“Kung-fu-punk” action at a blistering pace. As the assassin Soul, weave together lethal weapon styles in fluid, deeply technical combat across a striking world blending wuxia myth with steampunk machinery."
- },
- {
-  "id": "wolverine",
-  "t": "Marvel's Wolverine",
-  "dev": "Insomniac Games",
-  "date": "2026-09-15",
-  "plat": "excl",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 3,
-  "bio": "Insomniac's brutal, mature take on Logan. A more savage, grounded combat system leans into berserker rage and healing-factor punishment as Wolverine hunts answers about his past. The marquee PS5 exclusive of the year."
- },
- {
-  "id": "dune",
-  "t": "Dune: Awakening",
-  "dev": "Funcom",
-  "date": "2026-09-22",
-  "plat": "multi",
-  "g": [
-   "Survival",
-   "MMO"
-  ],
-  "hype": 2,
-  "bio": "The open-world survival MMO finally arrives on PS5. Survive Arrakis itself — manage water, dodge sandworms and storms, harvest spice, and build power in a shared, faction-driven Dune sandbox."
- },
- {
-  "id": "control",
-  "t": "Control: Resonant",
-  "dev": "Remedy Entertainment",
-  "date": "2026-09-24",
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 3,
-  "bio": "The long-awaited follow-up to Control. Return to Remedy's reality-warping universe with telekinetic combat, shifting brutalist architecture and the studio's trademark weird, layered storytelling."
- },
- {
-  "id": "silenthill",
-  "t": "Silent Hill: Townfall",
-  "dev": "No Code / Konami",
-  "date": "2026-09-24",
-  "plat": "multi",
-  "g": [
-   "Horror"
-  ],
-  "hype": 2,
-  "bio": "A fresh, experimental entry in the Silent Hill universe from the makers of Stories Untold. Light on details, heavy on dread — psychological horror that promises to play with form as much as fear."
- },
- {
-  "id": "onimusha",
-  "t": "Onimusha: Way of the Sword",
-  "dev": "Capcom",
-  "date": "2026-09-25",
-  "plat": "multi",
-  "g": [
-   "Action"
-  ],
-  "hype": 2,
-  "bio": "Capcom revives its samurai-horror series. Set in a haunted Edo-era Japan, channel the Oni Gauntlet to absorb demon souls and master tense, weighty katana duels against the Genma."
- },
- {
-  "id": "dw3",
-  "t": "Dynasty Warriors 3: Complete Edition Remastered",
-  "dev": "Koei Tecmo",
-  "date": "2026-10-01",
-  "plat": "multi",
-  "g": [
-   "Action"
-  ],
-  "hype": 1,
-  "bio": "A polished remaster of the entry that defined the one-vs-thousands musou formula, bundling its expansions. Comfort-food carnage across the Three Kingdoms for series veterans and the curious alike."
- },
- {
-  "id": "endofabyss",
-  "t": "End of Abyss",
-  "dev": "Section 9 Interactive",
-  "date": "2026-10-01",
-  "plat": "multi",
-  "g": [
-   "Horror"
-  ],
-  "hype": 1,
-  "bio": "An isometric sci-fi survival-horror set in a doomed deep-space facility. Atmosphere-first dread, scarce resources, and a creeping unknown lurking just beyond the edge of the light."
- },
- {
-  "id": "acecombat",
-  "t": "Ace Combat 8: Wings of Theve",
-  "dev": "Project Aces / Bandai Namco",
-  "date": "2026-10-02",
-  "plat": "multi",
-  "g": [
-   "Action"
-  ],
-  "hype": 2,
-  "bio": "High-G arcade dogfighting returns. Expect operatic skies, a melodramatic war story, dozens of jets and that unmistakable Ace Combat thrill of threading missiles through canyon walls at Mach speed."
- },
- {
-  "id": "galacticracer",
-  "t": "Star Wars: Galactic Racer",
-  "dev": "Lucasfilm Games",
-  "date": "2026-10-06",
-  "plat": "multi",
-  "g": [
-   "Racing"
-  ],
-  "hype": 1,
-  "bio": "Arcade podracing for a new generation. Tear through canyons and city circuits, sabotage rivals, and chase a championship under the thumb of a corrupt league champion in a scrappy, high-speed Star Wars racer."
- },
- {
-  "id": "norest",
-  "t": "No Rest for the Wicked",
-  "dev": "Moon Studios",
-  "date": "2026-10-15",
-  "win": {
-   "y": 2026,
-   "m": 10
+  {
+    "id": "acbf",
+    "t": "Assassin's Creed Black Flag Resynced",
+    "dev": "Ubisoft",
+    "date": "2026-07-09",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "A ground-up remake of the beloved pirate chapter. Sail the Caribbean as Edward Kenway with rebuilt naval combat, modernised stealth, and a fully remastered open world of islands, forts and ghostly shipwrecks.",
+    "mc": 84,
+    "mcUrl": "https://www.metacritic.com/game/assassins-creed-black-flag-resynced/",
+    "img": "https://img.youtube.com/vi/-iXraESkNGE/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Action",
-   "RPG"
-  ],
-  "hype": 2,
-  "bio": "The full 1.0 launch of Moon Studios' hand-painted action-RPG, arriving on PS5. Brutal, deliberate combat meets gorgeous Ori-pedigree art and a grim story of plague, faith and a kingdom on the brink."
- },
- {
-  "id": "castlevania",
-  "t": "Castlevania: Belmont's Curse",
-  "dev": "Konami",
-  "date": "2026-10-30",
-  "win": {
-   "y": 2026,
-   "m": 10
+  {
+    "id": "halo",
+    "t": "Halo: Campaign Evolved",
+    "dev": "Halo Studios",
+    "date": "2026-07-28",
+    "plat": "multi",
+    "g": [
+      "Shooter"
+    ],
+    "hype": 2,
+    "bio": "The first mainline Halo ever to land on PlayStation \u2014 an Unreal Engine 5 remake of Combat Evolved's campaign with 4K visuals, nine extra weapons, and a brand-new three-mission prologue, Operation: METEORITE.",
+    "mc": 80,
+    "mcUrl": "https://www.metacritic.com/game/halo-campaign-evolved/",
+    "img": "https://img.youtube.com/vi/Wn2m4Xhk2UE/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Action"
-  ],
-  "hype": 2,
-  "bio": "A new Castlevania arriving just in time for Halloween. The Belmont whip cracks again through a gothic castle of the night — early details are scarce, but the bloodline's curse is back."
- },
- {
-  "id": "mcdungeons2",
-  "t": "Minecraft Dungeons 2",
-  "dev": "Mojang Studios",
-  "date": "2026-09-30",
-  "win": {
-   "y": 2026,
-   "m": 9
+  {
+    "id": "tokon",
+    "t": "Marvel Tokon: Fighting Souls",
+    "dev": "Arc System Works / PlayStation",
+    "date": "2026-08-06",
+    "plat": "cons",
+    "g": [
+      "Fighting"
+    ],
+    "hype": 2,
+    "bio": "A gorgeous 4-vs-4 tag-team Marvel brawler from the Guilty Gear studio. Build a squad from 20 launch heroes and villains, chain tag combos, and switch fighters mid-fight in flashy, combo-heavy bouts.",
+    "img": "https://img.youtube.com/vi/sMTB83N6_XY/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Action",
-   "RPG"
-  ],
-  "hype": 1,
-  "bio": "A sequel to the breezy, co-op-friendly dungeon crawler. Loot-driven action in the blocky Minecraft world, built for couch or online play with friends and a low barrier to entry."
- },
- {
-  "id": "gta6",
-  "t": "Grand Theft Auto VI",
-  "dev": "Rockstar Games",
-  "date": "2026-11-19",
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 3,
-  "bio": "The big one. Rockstar returns to a neon-soaked, modern Vice City in the state of Leonida, following Jason and Lucia in a sprawling open world widely expected to be one of the largest entertainment launches ever."
- },
- {
-  "id": "strangerthanheaven",
-  "t": "Stranger Than Heaven",
-  "dev": "RGG Studio",
-  "date": "2027-01-15",
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "From the Yakuza/Like a Dragon team, a stylish period crime drama spanning decades of modern Japan. Brawl, charm and sing your way through a sprawling tale of people with nowhere left to go."
- },
- {
-  "id": "tombraider",
-  "t": "Tomb Raider: Legacy of Atlantis",
-  "dev": "Crystal Dynamics",
-  "date": "2027-02-12",
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "Lara Croft's next adventure revisits her roots, from the Peru Lost Valley outward, in a return to classic tomb-raiding: puzzle-filled ruins, deadly traps and lost-civilisation mystery."
- },
- {
-  "id": "persona4",
-  "t": "Persona 4 Revival",
-  "dev": "Atlus",
-  "date": "2027-02-18",
-  "plat": "multi",
-  "g": [
-   "RPG"
-  ],
-  "hype": 2,
-  "bio": "A full remake of the cult JRPG. Balance high-school life and a murder mystery inside the eerie TV world, building bonds by day and battling Shadows by night, rebuilt with modern visuals and systems."
- },
- {
-  "id": "fable",
-  "t": "Fable",
-  "dev": "Playground Games",
-  "date": "2027-02-23",
-  "plat": "multi",
-  "g": [
-   "RPG",
-   "Action"
-  ],
-  "hype": 3,
-  "bio": "Playground's reboot of the British fantasy series — now confirmed for PS5. A witty, fairy-tale Albion of moral choice, where a self-styled hero's actions ripple across a living, storybook world. Jack of Blades returns."
- },
- {
-  "id": "metro2039",
-  "t": "Metro 2039",
-  "dev": "4A Games",
-  "date": "2027-02-15",
-  "win": {
-   "y": 2027,
-   "m": 2
+  {
+    "id": "zerocompany",
+    "t": "Star Wars: Zero Company",
+    "dev": "Bit Reactor / Respawn",
+    "date": "2026-08-15",
+    "win": {
+      "y": 2026,
+      "m": 8
+    },
+    "plat": "multi",
+    "g": [
+      "Strategy"
+    ],
+    "hype": 2,
+    "bio": "A turn-based tactics game in the XCOM mould set in the Clone Wars era. Lead a customisable squad of misfits, manage cover and abilities, and build bonds between your soldiers across a galaxy at war.",
+    "img": "https://img.youtube.com/vi/ksOBF-T5LrA/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Shooter",
-   "Horror"
-  ],
-  "hype": 2,
-  "bio": "The next chapter of the post-apocalyptic shooter saga. Descend back into the irradiated tunnels and ruined surface of Moscow for tense, survival-flavoured gunplay, scarce ammo and creeping atmosphere."
- },
- {
-  "id": "ffrev",
-  "t": "Final Fantasy VII Revelation",
-  "dev": "Square Enix",
-  "date": "2027-04-01",
-  "win": {
-   "y": 2027,
-   "s": "Spring"
+  {
+    "id": "mgs2",
+    "t": "Metal Gear Solid: Master Collection Vol. 2",
+    "dev": "Konami",
+    "date": "2026-08-27",
+    "plat": "multi",
+    "g": [
+      "Stealth",
+      "Action"
+    ],
+    "hype": 1,
+    "bio": "The second wave of classic Metal Gear remasters, bundling later entries in the saga with extras and quality-of-life touches \u2014 essential preservation for stealth-action fans catching up on Kojima's run.",
+    "img": "https://img.youtube.com/vi/a3AujdsJvjI/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "RPG"
-  ],
-  "hype": 3,
-  "bio": "The finale of the Remake trilogy. Cloud and company's journey reaches its climax — expect the series' lavish production, evolved action-RPG combat, and the emotional payoff fans have waited a generation for."
- },
- {
-  "id": "woolong2",
-  "t": "Wo Long 2: Wings of Ember",
-  "dev": "Team Ninja",
-  "date": "2027-03-15",
-  "win": {
-   "y": 2027,
-   "s": "Early"
+  {
+    "id": "plague",
+    "t": "Resonance: A Plague Tale Legacy",
+    "dev": "Asobo Studio",
+    "date": "2026-08-27",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "A new chapter in the acclaimed plague-ravaged saga of Amicia and Hugo. Expect the series' signature mix of stealth, light-and-rats puzzling, and gut-punch storytelling against a beautiful, brutal medieval France.",
+    "img": "https://img.youtube.com/vi/6lCzpRkoFjw/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Action",
-   "RPG"
-  ],
-  "hype": 2,
-  "bio": "Team Ninja's Three-Kingdoms soulslike returns. Parry-heavy, aggressive combat and morale-driven systems set against a dark, demon-haunted retelling of ancient Chinese history."
- },
- {
-  "id": "joinus",
-  "t": "Join Us",
-  "dev": "Announced at Xbox Showcase",
-  "win": {
-   "y": 2027,
-   "m": 3
+  {
+    "id": "dawnwalker",
+    "t": "The Blood of Dawnwalker",
+    "dev": "Rebel Wolves",
+    "date": "2026-09-03",
+    "plat": "multi",
+    "g": [
+      "RPG"
+    ],
+    "hype": 3,
+    "bio": "A dark-fantasy vampire RPG from ex-Witcher 3 leads. Play a man caught between human and vampire as a literal day/night clock shapes a non-linear story \u2014 your hours are limited, and every choice spends them.",
+    "img": "https://img.youtube.com/vi/j0xImb-hHKI/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Horror"
-  ],
-  "hype": 1,
-  "bio": "A new horror title unveiled during the June 2026 Xbox Showcase, confirmed for PS5. Early footage leans into unsettling cult imagery and dread — one to keep an eye on as details emerge."
- },
- {
-  "id": "stateofdecay3",
-  "t": "State of Decay 3",
-  "dev": "Undead Labs",
-  "win": {
-   "y": 2027
+  {
+    "id": "phantomblade",
+    "t": "Phantom Blade Zero",
+    "dev": "S-Game",
+    "date": "2026-09-09",
+    "plat": "cons",
+    "g": [
+      "Action",
+      "RPG"
+    ],
+    "hype": 3,
+    "bio": "\u201cKung-fu-punk\u201d action at a blistering pace. As the assassin Soul, weave together lethal weapon styles in fluid, deeply technical combat across a striking world blending wuxia myth with steampunk machinery.",
+    "img": "https://img.youtube.com/vi/EZr1HXkEahs/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Survival",
-   "Action"
-  ],
-  "hype": 2,
-  "bio": "The open-world zombie-survival series goes multiplatform, reaching PS5. Manage a fragile community, scavenge, and weigh permanent-death stakes in a hostile, systems-driven sandbox of the undead."
- },
- {
-  "id": "untildawn2",
-  "t": "Until Dawn 2",
-  "dev": "Ballistic Moon",
-  "win": {
-   "y": 2027
+  {
+    "id": "wolverine",
+    "t": "Marvel's Wolverine",
+    "dev": "Insomniac Games",
+    "date": "2026-09-15",
+    "plat": "excl",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 3,
+    "bio": "Insomniac's brutal, mature take on Logan. A more savage, grounded combat system leans into berserker rage and healing-factor punishment as Wolverine hunts answers about his past. The marquee PS5 exclusive of the year.",
+    "img": "https://img.youtube.com/vi/eQgbnQmYmGo/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Horror"
-  ],
-  "hype": 2,
-  "bio": "A standalone sequel to the branching teen-slasher hit, with a fresh cast. Expect the same cinematic, choice-driven “butterfly effect” horror where anyone can live — or die — by your decisions."
- },
- {
-  "id": "ill",
-  "t": "ILL",
-  "dev": "Team Clout / Mundfish",
-  "win": {
-   "y": 2027
+  {
+    "id": "dune",
+    "t": "Dune: Awakening",
+    "dev": "Funcom",
+    "date": "2026-09-22",
+    "plat": "multi",
+    "g": [
+      "Survival",
+      "MMO"
+    ],
+    "hype": 2,
+    "bio": "The open-world survival MMO finally arrives on PS5. Survive Arrakis itself \u2014 manage water, dodge sandworms and storms, harvest spice, and build power in a shared, faction-driven Dune sandbox.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/1172710/header.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Horror",
-   "Shooter"
-  ],
-  "hype": 2,
-  "bio": "A first-person body-horror shooter that turned heads with its grotesque, hyper-detailed creature design. Visceral, stomach-churning atmosphere married to tense survival gunplay."
- },
- {
-  "id": "kemuri",
-  "t": "Kemuri",
-  "dev": "Unseen",
-  "win": {
-   "y": 2027
+  {
+    "id": "control",
+    "t": "Control: Resonant",
+    "dev": "Remedy Entertainment",
+    "date": "2026-09-24",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 3,
+    "bio": "The long-awaited follow-up to Control. Return to Remedy's reality-warping universe with telekinetic combat, shifting brutalist architecture and the studio's trademark weird, layered storytelling.",
+    "img": "https://img.youtube.com/vi/TAzxTMaA6j4/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "From Ikumi Nakamura's studio, a vibrant supernatural co-op action game. Hunt yokai across a fantastical near-future Japan with a slingshot-like “dango” grapple and a bold, characterful art style."
- },
- {
-  "id": "clutch",
-  "t": "Clutch",
-  "dev": "Ex-Forza Horizon devs",
-  "win": {
-   "y": 2027
+  {
+    "id": "silenthill",
+    "t": "Silent Hill: Townfall",
+    "dev": "No Code / Konami",
+    "date": "2026-09-24",
+    "plat": "multi",
+    "g": [
+      "Horror"
+    ],
+    "hype": 2,
+    "bio": "A fresh, experimental entry in the Silent Hill universe from the makers of Stories Untold. Light on details, heavy on dread \u2014 psychological horror that promises to play with form as much as fear.",
+    "img": "https://img.youtube.com/vi/CvN3dP92wxU/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Racing"
-  ],
-  "hype": 1,
-  "bio": "A story-focused open-world racer from former Forza Horizon developers. Aims to blend festival-style driving freedom with an actual narrative hook — coming to PS5 next year."
- },
- {
-  "id": "gowlaufey",
-  "t": "God of War: Laufey",
-  "dev": "Santa Monica Studio",
-  "tbd": true,
-  "plat": "excl",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 3,
-  "bio": "A surprise God of War spin-off shifting perspective to Faye — Kratos' wife and Atreus' mother — on a journey through what appears to be a mythological afterlife. Revealed June 2026; no window yet."
- },
- {
-  "id": "intergalactic",
-  "t": "Intergalactic: The Heretic Prophet",
-  "dev": "Naughty Dog",
-  "tbd": true,
-  "plat": "excl",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 3,
-  "bio": "Naughty Dog's ambitious new sci-fi IP starring bounty hunter Jordan A. Mun, stranded on a quarantined planet ruled by a cult. Reported to be targeting 2027, but still undated."
- },
- {
-  "id": "recodeveronica",
-  "t": "Resident Evil: Code Veronica (Remake)",
-  "dev": "Capcom",
-  "tbd": true,
-  "plat": "multi",
-  "g": [
-   "Horror"
-  ],
-  "hype": 2,
-  "bio": "Revealed at Summer Game Fest 2026 — a full remake of the cult classic survival-horror. Claire and Chris Redfield's island-and-Antarctica nightmare, rebuilt in the RE Engine. No date confirmed yet."
- },
- {
-  "id": "fairgames",
-  "t": "Fairgame$",
-  "dev": "Haven Studios",
-  "tbd": true,
-  "plat": "excl",
-  "g": [
-   "Action"
-  ],
-  "hype": 1,
-  "bio": "A stylish co-op live-service heist game pitting crews against the ultra-wealthy. Long in development at Sony's Haven Studios; still searching for a firm release window."
- },
- {
-  "id": "guildwars3",
-  "t": "Guild Wars 3",
-  "dev": "ArenaNet",
-  "tbd": true,
-  "plat": "cons",
-  "g": [
-   "MMO",
-   "RPG"
-  ],
-  "hype": 1,
-  "bio": "The next entry in ArenaNet's MMO franchise, confirmed for PS5 and PC. Promises a new world, momentum-based movement and a reworked combat system — but it's early days, with no date."
- },
- {
-  "id": "balladofantara",
-  "t": "Ballad of Antara",
-  "dev": "TipsWorks",
-  "tbd": true,
-  "plat": "cons",
-  "g": [
-   "RPG",
-   "Action"
-  ],
-  "hype": 1,
-  "bio": "A striking single-player action-RPG set in a world blurring myth and machine. Console-bound for PS5 alongside PC; shown in trailers but still without a release window."
- },
- {
-  "id": "wolfamongus2",
-  "t": "The Wolf Among Us 2",
-  "dev": "Telltale Games",
-  "win": {
-   "y": 2027
+  {
+    "id": "onimusha",
+    "t": "Onimusha: Way of the Sword",
+    "dev": "Capcom",
+    "date": "2026-09-25",
+    "plat": "multi",
+    "g": [
+      "Action"
+    ],
+    "hype": 2,
+    "bio": "Capcom revives its samurai-horror series. Set in a haunted Edo-era Japan, channel the Oni Gauntlet to absorb demon souls and master tense, weighty katana duels against the Genma.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/2638890/header.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "The long-awaited sequel to Telltale's noir Fables adaptation. Step back into Bigby Wolf's worn boots for another branching, choice-driven crime story on the seedy streets of Fabletown."
- },
- {
-  "id": "kena2",
-  "t": "Kena: Scars of Kosmora",
-  "dev": "Ember Lab",
-  "win": {
-   "y": 2026
+  {
+    "id": "dw3",
+    "t": "Dynasty Warriors 3: Complete Edition Remastered",
+    "dev": "Koei Tecmo",
+    "date": "2026-10-01",
+    "plat": "multi",
+    "g": [
+      "Action"
+    ],
+    "hype": 1,
+    "bio": "A polished remaster of the entry that defined the one-vs-thousands musou formula, bundling its expansions. Comfort-food carnage across the Three Kingdoms for series veterans and the curious alike.",
+    "img": "https://img.youtube.com/vi/UTVVw9fsHVA/maxresdefault.jpg"
   },
-  "plat": "cons",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 2,
-  "bio": "A follow-up to the Pixar-gorgeous Bridge of Spirits. Expect lush animated worlds, spirit-guiding Rot companions, and accessible action-adventure combat, built for PS5."
- },
- {
-  "id": "beastreincarnation",
-  "t": "Beast of Reincarnation",
-  "dev": "Game Freak",
-  "win": {
-   "y": 2026
+  {
+    "id": "endofabyss",
+    "t": "End of Abyss",
+    "dev": "Section 9 Interactive",
+    "date": "2026-10-01",
+    "plat": "multi",
+    "g": [
+      "Horror"
+    ],
+    "hype": 1,
+    "bio": "An isometric sci-fi survival-horror set in a doomed deep-space facility. Atmosphere-first dread, scarce resources, and a creeping unknown lurking just beyond the edge of the light.",
+    "img": "https://img.youtube.com/vi/mTue29WoYHc/maxresdefault.jpg"
   },
-  "plat": "cons",
-  "g": [
-   "Action",
-   "RPG"
-  ],
-  "hype": 2,
-  "bio": "An original action-RPG from the Pokemon studio, set in a decayed far-future Japan. Bond with a wolf-like companion and fight through a ruined world in Game Freak's most ambitious non-Pokemon swing in years."
- },
- {
-  "id": "tidesannihilation",
-  "t": "Tides of Annihilation",
-  "dev": "Eclipse Glow Games",
-  "win": {
-   "y": 2026
+  {
+    "id": "acecombat",
+    "t": "Ace Combat 8: Wings of Theve",
+    "dev": "Project Aces / Bandai Namco",
+    "date": "2026-10-02",
+    "plat": "multi",
+    "g": [
+      "Action"
+    ],
+    "hype": 2,
+    "bio": "High-G arcade dogfighting returns. Expect operatic skies, a melodramatic war story, dozens of jets and that unmistakable Ace Combat thrill of threading missiles through canyon walls at Mach speed.",
+    "img": "https://img.youtube.com/vi/c2bgoQhlzqE/maxresdefault.jpg"
   },
-  "plat": "multi",
-  "g": [
-   "Action",
-   "Adventure"
-  ],
-  "hype": 1,
-  "bio": "A cinematic action-adventure reimagining Arthurian legend in a ruined modern London. Summon spectral Knights of the Round Table to fight beside you against an invading otherworldly force."
- },
- {
-  "id": "persona6",
-  "t": "Persona 6",
-  "dev": "Atlus",
-  "tbd": true,
-  "plat": "multi",
-  "g": [
-   "RPG"
-  ],
-  "hype": 2,
-  "bio": "The next mainline Persona, freshly announced with a tone said to echo Persona 3. The series' signature blend of social-sim daily life and stylish turn-based dungeon-crawling — platforms confirmed, date still to come."
- }
+  {
+    "id": "galacticracer",
+    "t": "Star Wars: Galactic Racer",
+    "dev": "Lucasfilm Games",
+    "date": "2026-10-06",
+    "plat": "multi",
+    "g": [
+      "Racing"
+    ],
+    "hype": 1,
+    "bio": "Arcade podracing for a new generation. Tear through canyons and city circuits, sabotage rivals, and chase a championship under the thumb of a corrupt league champion in a scrappy, high-speed Star Wars racer.",
+    "img": "https://img.youtube.com/vi/Je9SLyqRtc0/maxresdefault.jpg"
+  },
+  {
+    "id": "norest",
+    "t": "No Rest for the Wicked",
+    "dev": "Moon Studios",
+    "date": "2026-10-15",
+    "win": {
+      "y": 2026,
+      "m": 10
+    },
+    "plat": "multi",
+    "g": [
+      "Action",
+      "RPG"
+    ],
+    "hype": 2,
+    "bio": "The full 1.0 launch of Moon Studios' hand-painted action-RPG, arriving on PS5. Brutal, deliberate combat meets gorgeous Ori-pedigree art and a grim story of plague, faith and a kingdom on the brink.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/1371980/header.jpg"
+  },
+  {
+    "id": "castlevania",
+    "t": "Castlevania: Belmont's Curse",
+    "dev": "Konami",
+    "date": "2026-10-30",
+    "win": {
+      "y": 2026,
+      "m": 10
+    },
+    "plat": "multi",
+    "g": [
+      "Action"
+    ],
+    "hype": 2,
+    "bio": "A new Castlevania arriving just in time for Halloween. The Belmont whip cracks again through a gothic castle of the night \u2014 early details are scarce, but the bloodline's curse is back.",
+    "img": "https://img.youtube.com/vi/X3-SJLWzjmE/maxresdefault.jpg"
+  },
+  {
+    "id": "mcdungeons2",
+    "t": "Minecraft Dungeons 2",
+    "dev": "Mojang Studios",
+    "date": "2026-09-30",
+    "win": {
+      "y": 2026,
+      "m": 9
+    },
+    "plat": "multi",
+    "g": [
+      "Action",
+      "RPG"
+    ],
+    "hype": 1,
+    "bio": "A sequel to the breezy, co-op-friendly dungeon crawler. Loot-driven action in the blocky Minecraft world, built for couch or online play with friends and a low barrier to entry.",
+    "img": "https://img.youtube.com/vi/IIcdX_J3cn0/maxresdefault.jpg"
+  },
+  {
+    "id": "gta6",
+    "t": "Grand Theft Auto VI",
+    "dev": "Rockstar Games",
+    "date": "2026-11-19",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 3,
+    "bio": "The big one. Rockstar returns to a neon-soaked, modern Vice City in the state of Leonida, following Jason and Lucia in a sprawling open world widely expected to be one of the largest entertainment launches ever.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/1546990/header.jpg"
+  },
+  {
+    "id": "strangerthanheaven",
+    "t": "Stranger Than Heaven",
+    "dev": "RGG Studio",
+    "date": "2027-01-15",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "From the Yakuza/Like a Dragon team, a stylish period crime drama spanning decades of modern Japan. Brawl, charm and sing your way through a sprawling tale of people with nowhere left to go.",
+    "img": "https://img.youtube.com/vi/3wrIc0qNHl0/maxresdefault.jpg"
+  },
+  {
+    "id": "tombraider",
+    "t": "Tomb Raider: Legacy of Atlantis",
+    "dev": "Crystal Dynamics",
+    "date": "2027-02-12",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "Lara Croft's next adventure revisits her roots, from the Peru Lost Valley outward, in a return to classic tomb-raiding: puzzle-filled ruins, deadly traps and lost-civilisation mystery.",
+    "img": "https://img.youtube.com/vi/1lJBNZ1Dk6k/maxresdefault.jpg"
+  },
+  {
+    "id": "persona4",
+    "t": "Persona 4 Revival",
+    "dev": "Atlus",
+    "date": "2027-02-18",
+    "plat": "multi",
+    "g": [
+      "RPG"
+    ],
+    "hype": 2,
+    "bio": "A full remake of the cult JRPG. Balance high-school life and a murder mystery inside the eerie TV world, building bonds by day and battling Shadows by night, rebuilt with modern visuals and systems.",
+    "img": "https://img.youtube.com/vi/SvbWwZGEnkw/maxresdefault.jpg"
+  },
+  {
+    "id": "fable",
+    "t": "Fable",
+    "dev": "Playground Games",
+    "date": "2027-02-23",
+    "plat": "multi",
+    "g": [
+      "RPG",
+      "Action"
+    ],
+    "hype": 3,
+    "bio": "Playground's reboot of the British fantasy series \u2014 now confirmed for PS5. A witty, fairy-tale Albion of moral choice, where a self-styled hero's actions ripple across a living, storybook world. Jack of Blades returns.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/2769570/header.jpg"
+  },
+  {
+    "id": "metro2039",
+    "t": "Metro 2039",
+    "dev": "4A Games",
+    "date": "2027-02-15",
+    "win": {
+      "y": 2027,
+      "m": 2
+    },
+    "plat": "multi",
+    "g": [
+      "Shooter",
+      "Horror"
+    ],
+    "hype": 2,
+    "bio": "The next chapter of the post-apocalyptic shooter saga. Descend back into the irradiated tunnels and ruined surface of Moscow for tense, survival-flavoured gunplay, scarce ammo and creeping atmosphere.",
+    "img": "https://img.youtube.com/vi/1OFIJdlyKyY/maxresdefault.jpg"
+  },
+  {
+    "id": "ffrev",
+    "t": "Final Fantasy VII Revelation",
+    "dev": "Square Enix",
+    "date": "2027-04-01",
+    "win": {
+      "y": 2027,
+      "s": "Spring"
+    },
+    "plat": "multi",
+    "g": [
+      "RPG"
+    ],
+    "hype": 3,
+    "bio": "The finale of the Remake trilogy. Cloud and company's journey reaches its climax \u2014 expect the series' lavish production, evolved action-RPG combat, and the emotional payoff fans have waited a generation for.",
+    "img": "https://img.youtube.com/vi/8JszLth0_Gc/maxresdefault.jpg"
+  },
+  {
+    "id": "woolong2",
+    "t": "Wo Long 2: Wings of Ember",
+    "dev": "Team Ninja",
+    "date": "2027-03-15",
+    "win": {
+      "y": 2027,
+      "s": "Early"
+    },
+    "plat": "multi",
+    "g": [
+      "Action",
+      "RPG"
+    ],
+    "hype": 2,
+    "bio": "Team Ninja's Three-Kingdoms soulslike returns. Parry-heavy, aggressive combat and morale-driven systems set against a dark, demon-haunted retelling of ancient Chinese history.",
+    "img": "https://img.youtube.com/vi/kUhgQAT0HB8/maxresdefault.jpg"
+  },
+  {
+    "id": "joinus",
+    "t": "Join Us",
+    "dev": "Announced at Xbox Showcase",
+    "win": {
+      "y": 2027,
+      "m": 3
+    },
+    "plat": "multi",
+    "g": [
+      "Horror"
+    ],
+    "hype": 1,
+    "bio": "A new horror title unveiled during the June 2026 Xbox Showcase, confirmed for PS5. Early footage leans into unsettling cult imagery and dread \u2014 one to keep an eye on as details emerge.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/3401960/header.jpg"
+  },
+  {
+    "id": "stateofdecay3",
+    "t": "State of Decay 3",
+    "dev": "Undead Labs",
+    "win": {
+      "y": 2027
+    },
+    "plat": "multi",
+    "g": [
+      "Survival",
+      "Action"
+    ],
+    "hype": 2,
+    "bio": "The open-world zombie-survival series goes multiplatform, reaching PS5. Manage a fragile community, scavenge, and weigh permanent-death stakes in a hostile, systems-driven sandbox of the undead.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/1340720/header.jpg"
+  },
+  {
+    "id": "untildawn2",
+    "t": "Until Dawn 2",
+    "dev": "Ballistic Moon",
+    "win": {
+      "y": 2027
+    },
+    "plat": "multi",
+    "g": [
+      "Horror"
+    ],
+    "hype": 2,
+    "bio": "A standalone sequel to the branching teen-slasher hit, with a fresh cast. Expect the same cinematic, choice-driven \u201cbutterfly effect\u201d horror where anyone can live \u2014 or die \u2014 by your decisions.",
+    "img": "https://img.youtube.com/vi/QpVZ9OvRLZI/maxresdefault.jpg"
+  },
+  {
+    "id": "ill",
+    "t": "ILL",
+    "dev": "Team Clout / Mundfish",
+    "win": {
+      "y": 2027
+    },
+    "plat": "multi",
+    "g": [
+      "Horror",
+      "Shooter"
+    ],
+    "hype": 2,
+    "bio": "A first-person body-horror shooter that turned heads with its grotesque, hyper-detailed creature design. Visceral, stomach-churning atmosphere married to tense survival gunplay.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/1757350/header.jpg"
+  },
+  {
+    "id": "kemuri",
+    "t": "Kemuri",
+    "dev": "Unseen",
+    "win": {
+      "y": 2027
+    },
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "From Ikumi Nakamura's studio, a vibrant supernatural co-op action game. Hunt yokai across a fantastical near-future Japan with a slingshot-like \u201cdango\u201d grapple and a bold, characterful art style.",
+    "img": "https://img.youtube.com/vi/yWMwRfJj8So/maxresdefault.jpg"
+  },
+  {
+    "id": "clutch",
+    "t": "Clutch",
+    "dev": "Ex-Forza Horizon devs",
+    "win": {
+      "y": 2027
+    },
+    "plat": "multi",
+    "g": [
+      "Racing"
+    ],
+    "hype": 1,
+    "bio": "A story-focused open-world racer from former Forza Horizon developers. Aims to blend festival-style driving freedom with an actual narrative hook \u2014 coming to PS5 next year.",
+    "img": "https://img.youtube.com/vi/znQA9JNRRCE/maxresdefault.jpg"
+  },
+  {
+    "id": "gowlaufey",
+    "t": "God of War: Laufey",
+    "dev": "Santa Monica Studio",
+    "tbd": true,
+    "plat": "excl",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 3,
+    "bio": "A surprise God of War spin-off shifting perspective to Faye \u2014 Kratos' wife and Atreus' mother \u2014 on a journey through what appears to be a mythological afterlife. Revealed June 2026; no window yet.",
+    "img": "https://img.youtube.com/vi/HLMX2w3cwuE/maxresdefault.jpg"
+  },
+  {
+    "id": "intergalactic",
+    "t": "Intergalactic: The Heretic Prophet",
+    "dev": "Naughty Dog",
+    "tbd": true,
+    "plat": "excl",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 3,
+    "bio": "Naughty Dog's ambitious new sci-fi IP starring bounty hunter Jordan A. Mun, stranded on a quarantined planet ruled by a cult. Reported to be targeting 2027, but still undated.",
+    "img": "https://img.youtube.com/vi/VLGy63pt9vA/maxresdefault.jpg"
+  },
+  {
+    "id": "recodeveronica",
+    "t": "Resident Evil: Code Veronica (Remake)",
+    "dev": "Capcom",
+    "tbd": true,
+    "plat": "multi",
+    "g": [
+      "Horror"
+    ],
+    "hype": 2,
+    "bio": "Revealed at Summer Game Fest 2026 \u2014 a full remake of the cult classic survival-horror. Claire and Chris Redfield's island-and-Antarctica nightmare, rebuilt in the RE Engine. No date confirmed yet.",
+    "img": "https://img.youtube.com/vi/S4msqGQxSAg/maxresdefault.jpg"
+  },
+  {
+    "id": "fairgames",
+    "t": "Fairgame$",
+    "dev": "Haven Studios",
+    "tbd": true,
+    "plat": "excl",
+    "g": [
+      "Action"
+    ],
+    "hype": 1,
+    "bio": "A stylish co-op live-service heist game pitting crews against the ultra-wealthy. Long in development at Sony's Haven Studios; still searching for a firm release window.",
+    "img": "https://img.youtube.com/vi/l1Jp4K02L1I/maxresdefault.jpg"
+  },
+  {
+    "id": "guildwars3",
+    "t": "Guild Wars 3",
+    "dev": "ArenaNet",
+    "tbd": true,
+    "plat": "cons",
+    "g": [
+      "MMO",
+      "RPG"
+    ],
+    "hype": 1,
+    "bio": "The next entry in ArenaNet's MMO franchise, confirmed for PS5 and PC. Promises a new world, momentum-based movement and a reworked combat system \u2014 but it's early days, with no date.",
+    "img": "https://img.youtube.com/vi/yIfC1KoDZ6s/maxresdefault.jpg"
+  },
+  {
+    "id": "balladofantara",
+    "t": "Ballad of Antara",
+    "dev": "TipsWorks",
+    "tbd": true,
+    "plat": "cons",
+    "g": [
+      "RPG",
+      "Action"
+    ],
+    "hype": 1,
+    "bio": "A striking single-player action-RPG set in a world blurring myth and machine. Console-bound for PS5 alongside PC; shown in trailers but still without a release window.",
+    "img": "https://img.youtube.com/vi/baOokyTUX_k/maxresdefault.jpg"
+  },
+  {
+    "id": "wolfamongus2",
+    "t": "The Wolf Among Us 2",
+    "dev": "Telltale Games",
+    "win": {
+      "y": 2027
+    },
+    "plat": "multi",
+    "g": [
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "The long-awaited sequel to Telltale's noir Fables adaptation. Step back into Bigby Wolf's worn boots for another branching, choice-driven crime story on the seedy streets of Fabletown.",
+    "img": "https://img.youtube.com/vi/mPj8FouOu8Q/maxresdefault.jpg"
+  },
+  {
+    "id": "kena2",
+    "t": "Kena: Scars of Kosmora",
+    "dev": "Ember Lab",
+    "win": {
+      "y": 2026
+    },
+    "plat": "cons",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "A follow-up to the Pixar-gorgeous Bridge of Spirits. Expect lush animated worlds, spirit-guiding Rot companions, and accessible action-adventure combat, built for PS5.",
+    "img": "https://img.youtube.com/vi/12EQpTwn4lY/maxresdefault.jpg"
+  },
+  {
+    "id": "beastreincarnation",
+    "t": "Beast of Reincarnation",
+    "dev": "Game Freak",
+    "win": {
+      "y": 2026
+    },
+    "plat": "cons",
+    "g": [
+      "Action",
+      "RPG"
+    ],
+    "hype": 2,
+    "bio": "An original action-RPG from the Pokemon studio, set in a decayed far-future Japan. Bond with a wolf-like companion and fight through a ruined world in Game Freak's most ambitious non-Pokemon swing in years.",
+    "img": "https://img.youtube.com/vi/zqxdVtJ24ms/maxresdefault.jpg"
+  },
+  {
+    "id": "tidesannihilation",
+    "t": "Tides of Annihilation",
+    "dev": "Eclipse Glow Games",
+    "win": {
+      "y": 2026
+    },
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 1,
+    "bio": "A cinematic action-adventure reimagining Arthurian legend in a ruined modern London. Summon spectral Knights of the Round Table to fight beside you against an invading otherworldly force.",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/3292470/header.jpg"
+  },
+  {
+    "id": "persona6",
+    "t": "Persona 6",
+    "dev": "Atlus",
+    "tbd": true,
+    "plat": "multi",
+    "g": [
+      "RPG"
+    ],
+    "hype": 2,
+    "bio": "The next mainline Persona, freshly announced with a tone said to echo Persona 3. The series' signature blend of social-sim daily life and stylish turn-based dungeon-crawling \u2014 platforms confirmed, date still to come.",
+    "img": "https://img.youtube.com/vi/fTrUOHJf0tc/maxresdefault.jpg"
+  },
+  {
+    "id": "spyrorealmbeyond",
+    "t": "Spyro: A Realm Beyond",
+    "dev": "Toys for Bob",
+    "plat": "multi",
+    "g": [
+      "Platformer",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "A brand-new mainline Spyro adventure built around true free-flight movement, sending the purple dragon to a strange realm under threat from an invading force called the Scavs. It marks Toys for Bob's first original Spyro story in nearly two decades.",
+    "win": {
+      "y": 2027,
+      "s": "Spring"
+    },
+    "img": "https://img.youtube.com/vi/I7YyTaPGIQc/maxresdefault.jpg"
+  },
+  {
+    "id": "wolfamongusremastered",
+    "t": "The Wolf Among Us Remastered",
+    "dev": "Telltale Games",
+    "plat": "multi",
+    "g": [
+      "Adventure"
+    ],
+    "hype": 1,
+    "bio": "A visually overhauled re-release of Telltale's noir fairy-tale detective story, rebuilding Bigby Wolf's original Fabletown murder investigation for current hardware. It serves as a lead-in for newcomers ahead of the upcoming sequel.",
+    "win": {
+      "y": 2026,
+      "s": "Holiday"
+    },
+    "img": "https://img.youtube.com/vi/AFWTFkneaCo/maxresdefault.jpg"
+  },
+  {
+    "id": "marvel1943",
+    "t": "Marvel 1943: Rise of Hydra",
+    "dev": "Skydance New Media",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Adventure"
+    ],
+    "hype": 2,
+    "bio": "A cinematic WWII-set action-adventure from Amy Hennig starring Captain America and a 1940s Black Panther fighting Hydra in occupied Paris. Long in development, it has been pushed back multiple times to give the small team room to polish its ambitious scope.",
+    "win": {
+      "y": 2027
+    },
+    "img": "https://img.youtube.com/vi/Lb2wwEx6DVw/maxresdefault.jpg"
+  },
+  {
+    "id": "mistfallhunter",
+    "t": "Mistfall Hunter",
+    "dev": "Bellring Games",
+    "plat": "multi",
+    "g": [
+      "Action",
+      "Survival"
+    ],
+    "hype": 2,
+    "bio": "A dark fantasy PvPvE extraction ARPG where squads of Gyldhunters brave a corrupting mist to battle monsters and rival players alike. Runs are high-stakes affairs where players must fight to extract with their loot intact or lose it all.",
+    "date": "2026-07-29",
+    "img": "https://cdn.akamai.steamstatic.com/steam/apps/3282300/header.jpg"
+  },
+  {
+    "id": "avatarfightinggame",
+    "t": "Avatar Legends: The Fighting Game",
+    "dev": "Gameplay Group International",
+    "plat": "multi",
+    "g": [
+      "Fighting"
+    ],
+    "hype": 2,
+    "bio": "A hand-drawn 2D fighting game pulling twelve benders from Avatar: The Last Airbender and The Legend of Korra into elemental one-on-one combat. It ships with rollback netcode, full crossplay, and a momentum-based Flow System, with Xbox and Switch versions following later.",
+    "date": "2026-07-23",
+    "mc": 81,
+    "mcUrl": "https://www.metacritic.com/game/avatar-legends-the-fighting-game/",
+    "img": "https://img.youtube.com/vi/5qlEuCfb8Qk/maxresdefault.jpg"
+  }
 ]
