@@ -12,8 +12,21 @@ export default async () => {
   try {
     const store = getStore("ps5board");
     const raw = await store.get("games");
-    const games = raw ? JSON.parse(raw) : seed;
+    let games = raw ? JSON.parse(raw) : seed;
     const updated = raw ? (await store.get("updated")) : null;
+
+    // Merge images from seed into blob data (seed is source of truth for img/mc/mcUrl)
+    if (raw) {
+      const seedById = new Map(seed.map(g => [g.id, g]));
+      games = games.map(g => {
+        const s = seedById.get(g.id);
+        if (!s) return g;
+        const merged = { ...g };
+        if (!merged.img && s.img) merged.img = s.img;
+        return merged;
+      });
+    }
+
     return new Response(JSON.stringify({ updated, count: games.length, games }), { headers });
   } catch (e) {
     return new Response(JSON.stringify({ updated: null, count: seed.length, games: seed }), { headers });
