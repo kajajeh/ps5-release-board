@@ -401,7 +401,7 @@ function cardHTML(g){
     <div class="art" style="${bg}">
       ${art}${pill}
       <div class="platbadge ${g.plat}">${PLAT_LABEL[g.plat]}</div>
-      <div class="arttitle">${g.t}</div>
+      ${g.img ? '' : `<div class="arttitle">${g.t}</div>`}
     </div>
     <div class="body">
       <div>
