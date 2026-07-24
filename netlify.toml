@@ -3,3 +3,9 @@
   functions = "netlify/functions"
 
 # No build step needed — static site + functions. Netlify installs deps from package.json.
+
+[functions]
+  node_bundler = "esbuild"
+
+[functions."refresh"]
+  timeout = 300
