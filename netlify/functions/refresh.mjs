@@ -58,7 +58,7 @@ hype is 1, 2, or 3. Valid genres: Action, Adventure, RPG, Shooter, Horror, Fight
       body: JSON.stringify({
         model: MODEL,
         max_tokens: 8000,
-        tools: [{ type: SEARCH_TOOL, name: "web_search", max_uses: 10 }],
+        tools: [{ type: SEARCH_TOOL, name: "web_search", max_uses: 10, allowed_callers: ["direct"] }],
         messages: [{ role: "user", content: prompt }]
       })
     });
