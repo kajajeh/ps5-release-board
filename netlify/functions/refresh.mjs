@@ -1,8 +1,8 @@
 import { getStore } from "@netlify/blobs";
 import seed from "../../games.json" with { type: "json" };
 
-const MODEL = "claude-sonnet-4-6";          // cost-effective, supports web search
-const SEARCH_TOOL = "web_search_20250305";  // if this errors, update per Anthropic docs
+const MODEL = "claude-sonnet-5";             // cost-effective, supports web search
+const SEARCH_TOOL = "web_search_20260318";  // latest version with dynamic filtering
 const STORE = "ps5board";
 const KEY = "games";
 const VALID_G = new Set(["Action","Adventure","RPG","Shooter","Horror","Fighting","Racing","Strategy","Sports","MMO","Survival","Stealth","Platformer"]);
